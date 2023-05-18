@@ -70,7 +70,7 @@ public class Aurora {
     @Getter
     private static final ArrayList<Module> modules = new ArrayList<>();
     @Getter
-    private static boolean isSupporter = false;
+    private static boolean isSupporter = true;
     @Getter
     private static final String GUI_COMMAND = "aurorahud";
 
@@ -81,7 +81,7 @@ public class Aurora {
         MinecraftForge.EVENT_BUS.register(this);
         new Config().preload();
         CapeDatabase.getInstance().init();
-        isSupporter = supporterClassExist();
+        //isSupporter = supporterClassExist();
         CommunistScanners.init(new StructureCallBack() {
             @Override
             public void newStructure(@NotNull String server, @NotNull String name, @NotNull BlockPos blockPos) {
